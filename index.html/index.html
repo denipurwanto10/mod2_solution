@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Menu</title>
+    <style>
+        /* Styles directement intégrés dans le HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .menu-conteneur {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .menu-element {
+            flex: 1;
+            min-width: 300px;
+            background-color: #aaa;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .menu-entete {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+        
+        .entete-poulet {
+            background-color: #f8c0c0;
+        }
+        
+        .entete-boeuf {
+            background-color: #d55050;
+            color: white;
+        }
+        
+        .entete-sushi {
+            background-color: #f8e0b0;
+        }
+        
+        .menu-contenu {
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notre Menu</h1>
+    
+    <div class="menu-conteneur">
+        <div class="menu-element">
+            <div class="menu-entete entete-poulet">Poulet</div>
+            <div class="menu-contenu">
+                Nos plats de poulet sont préparés avec des ingrédients frais et de qualité. Nous proposons différentes cuissons selon vos goûts, du poulet rôti traditionnel aux recettes plus épicées. Tous nos poulets sont élevés en plein air et sélectionnés avec soin pour vous garantir une viande tendre et savoureuse.
+            </div>
+        </div>
+        
+        <div class="menu-element">
+            <div class="menu-entete entete-boeuf">Bœuf</div>
+            <div class="menu-contenu">
+                Notre sélection de bœuf provient d'élevages français respectueux du bien-être animal. Nous proposons différentes pièces comme l'entrecôte, le filet ou le rumsteck, selon vos préférences de cuisson. Chaque morceau est préparé avec soin pour préserver toutes ses qualités gustatives et sa tendreté.
+            </div>
+        </div>
+        
+        <div class="menu-element">
+            <div class="menu-entete entete-sushi">Sushi</div>
+            <div class="menu-contenu">
+                Nos sushis sont préparés à la minute par nos chefs expérimentés. Nous utilisons uniquement du poisson frais livré chaque jour et du riz spécial sushi cuit selon la tradition japonaise. Découvrez nos différentes variétés de makis, nigiris et california rolls pour un voyage gustatif au pays du soleil levant.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
