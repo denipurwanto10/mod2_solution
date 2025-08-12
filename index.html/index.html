@@ -1,86 +1,132 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Menu</title>
+    <title>Our Menu</title>
     <style>
-        /* Styles directement intégrés dans le HTML */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: white;
+            font-size: 16px;
+            background-color: #f5f5f5;
         }
-        
+
+        .container {
+            margin: 0 15px;
+        }
+
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            font-size: 1.75em; /* 75% larger than base */
+            margin: 30px 0;
+            color: #333;
         }
-        
-        .menu-conteneur {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
         }
-        
-        .menu-element {
-            flex: 1;
-            min-width: 300px;
-            background-color: #aaa;
-            border-radius: 5px;
-            overflow: hidden;
+
+        .section {
+            background-color: #999;
+            border: 1px solid black;
+            margin: 15px;
+            position: relative;
+            padding: 40px 15px 15px 15px;
         }
-        
-        .menu-entete {
-            padding: 10px;
-            text-align: center;
+
+        .section-title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #d59898;
+            border: 1px solid black;
+            padding: 8px 25px;
+            font-size: 1.25em; /* 25% larger than base */
             font-weight: bold;
             color: black;
         }
-        
-        .entete-poulet {
-            background-color: #f8c0c0;
+
+        .section p {
+            color: black;
+            line-height: 1.5;
+            margin-top: 10px;
         }
-        
-        .entete-boeuf {
-            background-color: #d55050;
+
+        /* Specific colors for each section title */
+        .chicken-title {
+            background-color: #d59898;
+        }
+
+        .beef-title {
+            background-color: #c14543;
             color: white;
         }
-        
-        .entete-sushi {
-            background-color: #f8e0b0;
+
+        .sushi-title {
+            background-color: #e5d198;
         }
-        
-        .menu-contenu {
-            padding: 15px;
-            font-size: 14px;
+
+        /* Desktop view - 992px and above */
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                float: left;
+                width: 33.33%;
+            }
+        }
+
+        /* Tablet view - 768px to 991px */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .col-md-6 {
+                float: left;
+                width: 50%;
+            }
+            .col-md-12 {
+                float: left;
+                width: 100%;
+            }
+        }
+
+        /* Mobile view - 767px and below */
+        @media (max-width: 767px) {
+            .col-sm-12 {
+                float: left;
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Notre Menu</h1>
-    
-    <div class="menu-conteneur">
-        <div class="menu-element">
-            <div class="menu-entete entete-poulet">Poulet</div>
-            <div class="menu-contenu">
-                Nos plats de poulet sont préparés avec des ingrédients frais et de qualité. Nous proposons différentes cuissons selon vos goûts, du poulet rôti traditionnel aux recettes plus épicées. Tous nos poulets sont élevés en plein air et sélectionnés avec soin pour vous garantir une viande tendre et savoureuse.
-            </div>
-        </div>
+    <div class="container">
+        <h1>Our Menu</h1>
         
-        <div class="menu-element">
-            <div class="menu-entete entete-boeuf">Bœuf</div>
-            <div class="menu-contenu">
-                Notre sélection de bœuf provient d'élevages français respectueux du bien-être animal. Nous proposons différentes pièces comme l'entrecôte, le filet ou le rumsteck, selon vos préférences de cuisson. Chaque morceau est préparé avec soin pour préserver toutes ses qualités gustatives et sa tendreté.
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="section">
+                    <div class="section-title chicken-title">Chicken</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
-        </div>
-        
-        <div class="menu-element">
-            <div class="menu-entete entete-sushi">Sushi</div>
-            <div class="menu-contenu">
-                Nos sushis sont préparés à la minute par nos chefs expérimentés. Nous utilisons uniquement du poisson frais livré chaque jour et du riz spécial sushi cuit selon la tradition japonaise. Découvrez nos différentes variétés de makis, nigiris et california rolls pour un voyage gustatif au pays du soleil levant.
+            
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="section">
+                    <div class="section-title beef-title">Beef</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="section">
+                    <div class="section-title sushi-title">Sushi</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
             </div>
         </div>
     </div>
